@@ -8,4 +8,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Used on the items at main activity layout -->
+    <style name="MainActivityItems">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Used on the FrameLayout at main activity layout -->
+    <style name="FrameLayoutItems">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/main_activity_items_color</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
 </resources>

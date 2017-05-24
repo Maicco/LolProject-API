@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">LeagueOfLegends-API</string>
+    <string name="app_name">LOL - API</string>
+    <!-- Strings used at main activity items -->
+    <string name="server_status">Server Status</string>
 </resources>
