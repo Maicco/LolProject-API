@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ServerStatusActivity"></activity>
+        <activity android:name=".ServerStatusActivity" android:label="@string/server_status" android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
