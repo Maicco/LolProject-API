@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-    private static final String API_KEY = "?api_key=RGAPI-12f35902-57c8-4cd9-aa2e-ba2f18283cd6";
-    private static final String SERVER_STATUS_URL = "https://br1.api.riotgames.com/lol/status/v3/shard-data?api_key=RGAPI-12f35902-57c8-4cd9-aa2e-ba2f18283cd6";
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

@@ -6,4 +6,10 @@
     <string name="online">Online</string>
     <string name="warning">Warning</string>
     <string name="offline">Offline</string>
+
+    <string name="no_internet_connection">No internet connection.</string>
+    <string name="no_data_received">No data received.</string>
+
+    <string name="there_are_no_info">There are no info.</string>
+    <string name="none">None</string>
 </resources>

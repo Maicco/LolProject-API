@@ -203,8 +203,9 @@ public final class ServerStatusUtils
                 JSONArray incidents = currentServerStatus.getJSONArray("incidents");
 
                 // Check the incident array length
-                if(incidents.length() >= 0)
+                if(incidents.length() > 0)
                 {
+                    Log.v(LOG_TAG, "True 1 -- " + incidents.length());
                     // Extracts the incident list
                     for (int n = 0; n < incidents.length(); n++)
                     {
@@ -216,8 +217,9 @@ public final class ServerStatusUtils
                         JSONArray updates = currentIncident.getJSONArray("updates");
 
                         // Check the updates array length
-                        if(updates.length() >= 0)
+                        if(updates.length() > 0)
                         {
+                            Log.v(LOG_TAG, "True 2 -- " + updates.length());
                             for (int j = 0; j < updates.length(); j++)
                             {
                                 // Get the current position [j] of current incident from the updates array
@@ -228,12 +230,23 @@ public final class ServerStatusUtils
                         }
                     }
                 }
+                else
+                {
+                    // Clear the variables to not show the same values again
+                    isIncidentStatusActive = false;
+                    messageContent = "There are no info.";
+                    severity = "None";
+                }
 
                 // Create an {@link ServerStatus} object with the data received from the serverStatusJSON object
                 ServerStatus singleServerStatus = new ServerStatus(regionName, regionTag, serverApplication, statusServerApplication, isIncidentStatusActive, messageContent, severity);
 
                 // Add the {@link singleServerStatus} object to the {@ArrayList status} list
                 status.add(singleServerStatus);
+                // Clear the variables to not show the same values again
+                isIncidentStatusActive = false;
+                messageContent = null;
+                severity = null;
             }
         }
         catch (JSONException e)
