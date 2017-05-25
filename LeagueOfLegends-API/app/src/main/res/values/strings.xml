@@ -2,4 +2,8 @@
     <string name="app_name">LOL - API</string>
     <!-- Strings used at main activity items -->
     <string name="server_status">Server Status</string>
+
+    <string name="online">Online</string>
+    <string name="warning">Warning</string>
+    <string name="offline">Offline</string>
 </resources>

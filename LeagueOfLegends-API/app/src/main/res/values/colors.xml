@@ -2,9 +2,17 @@
 <resources>
     <color name="colorPrimary">#212121</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#484848</color>
+    <color name="colorAccent">#D50000</color>
     <!-- Colors used at main activity layout -->
-    <color name="backgroung_color">#CFD8DC</color>
+    <color name="backgroung_color">#1a237e</color>
     <color name="main_activity_items_color">#D50000</color>
     <color name="text_color">#FFFFFF</color>
+
+    <!-- Status circle colors -->
+    <color name="status_online">#76ff03</color>
+    <color name="status_warning">#ffea00</color>
+    <color name="status_offline">#D93218</color>
+
+    <color name="list_item_text_color1">#1a237e</color>
+    <color name="list_item_text_color2">#ff9100</color>
 </resources>

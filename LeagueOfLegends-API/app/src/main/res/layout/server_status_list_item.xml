@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff8f00"
+    android:orientation="horizontal"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/status_circle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/status_circle_xml"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/region_tag"
+                style="@style/ListItemTextView"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textColor="@color/list_item_text_color1"
+                tools:text="br1 - Brazil" />
+
+            <TextView
+                android:id="@+id/server_application"
+                style="@style/ListItemTextView"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textColor="@color/list_item_text_color1"
+                android:paddingRight="8dp"
+                tools:text="Game" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/message_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="4"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            tools:text="Habilitamos temporariamente o modo de configuração leve para todos os jogadores enquanto investigamos um problema de performance."/>
+    </LinearLayout>
+</LinearLayout>
