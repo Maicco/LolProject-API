@@ -13,8 +13,6 @@ import java.util.ArrayList;
 
 public class ServerStatusAdapter extends ArrayAdapter<ServerStatus>
 {
-    private int mBackgroundColor;
-
     public ServerStatusAdapter(Activity context, ArrayList<ServerStatus> status)
     {
         super(context, 0, status);
