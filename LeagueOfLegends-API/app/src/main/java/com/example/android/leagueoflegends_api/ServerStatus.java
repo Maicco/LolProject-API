@@ -4,7 +4,8 @@ public class ServerStatus
 {
     private String mServerName, mRegionTag, mServerAppName, mServerStatus;
     private boolean mIncidentStatus;
-    private String mMessageContent, mSeverity;
+    private String mSeverity;
+    private String mMessageContent;
 
     /**
      * Constructs a new {@link ServerStatus} object.

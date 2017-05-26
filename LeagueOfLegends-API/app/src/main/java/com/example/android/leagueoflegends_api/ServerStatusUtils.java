@@ -26,7 +26,8 @@ public final class ServerStatusUtils
 {
     private static final String LOG_TAG = ServerStatusUtils.class.getSimpleName();
     private static boolean isIncidentStatusActive;
-    private static String messageContent, severity;
+    private static String messageContent = "";
+    private static String severity;
 
     // Create a private constructor because no one can create a ServerStatusUtils object.
     private ServerStatusUtils()
@@ -205,12 +206,11 @@ public final class ServerStatusUtils
                 // Check the incident array length
                 if(incidents.length() > 0)
                 {
-                    Log.v(LOG_TAG, "True 1 -- " + incidents.length());
                     // Extracts the incident list
                     for (int n = 0; n < incidents.length(); n++)
                     {
                         // Get the current incident from the incidents array
-                        JSONObject currentIncident = incidents.getJSONObject(i);
+                        JSONObject currentIncident = incidents.getJSONObject(n);
                         isIncidentStatusActive = currentIncident.getBoolean("active"); // Check if the incident status is active
 
                         // Get the list of updates from the current incident
@@ -219,12 +219,11 @@ public final class ServerStatusUtils
                         // Check the updates array length
                         if(updates.length() > 0)
                         {
-                            Log.v(LOG_TAG, "True 2 -- " + updates.length());
                             for (int j = 0; j < updates.length(); j++)
                             {
                                 // Get the current position [j] of current incident from the updates array
-                                JSONObject currentUpdate = updates.getJSONObject(i);
-                                messageContent = currentUpdate.getString("content"); // Get the message content from incident reason
+                                JSONObject currentUpdate = updates.getJSONObject(j);
+                                messageContent += currentUpdate.getString("content") + "\n"; // Get the message content from incident reason
                                 severity = currentUpdate.getString("severity"); // Get the incident severity
                             }
                         }
@@ -234,7 +233,7 @@ public final class ServerStatusUtils
                 {
                     // Clear the variables to not show the same values again
                     isIncidentStatusActive = false;
-                    messageContent = "There are no info.";
+                    messageContent = "No info";
                     severity = "None";
                 }
 
@@ -245,7 +244,7 @@ public final class ServerStatusUtils
                 status.add(singleServerStatus);
                 // Clear the variables to not show the same values again
                 isIncidentStatusActive = false;
-                messageContent = null;
+                messageContent = "";
                 severity = null;
             }
         }

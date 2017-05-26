@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class ServerStatusAdapter extends ArrayAdapter<ServerStatus>
 {
+    private static final String LOG_TAG = ServerStatusAdapter.class.getSimpleName();
+
     public ServerStatusAdapter(Activity context, ArrayList<ServerStatus> status)
     {
         super(context, 0, status);
@@ -36,15 +38,19 @@ public class ServerStatusAdapter extends ArrayAdapter<ServerStatus>
         // Get and set the color accordingly to the server status
         int statusColor = getStatusColor(currentItem.getServerStatus());
         statusCircle.setColor(statusColor);
+        // Set the text at right side of circle status
+        TextView statusTextView = (TextView) listItemView.findViewById(R.id.status_text_view);
+        statusTextView.setText(currentItem.getServerStatus());
 
         // Create the TextViews that shows the server region tag and for which server the status is showing
         TextView regionTag = (TextView) listItemView.findViewById(R.id.region_tag);
-        regionTag.setText(currentItem.getRegionTag());
+        regionTag.setText(currentItem.getRegionTag() + " - " + currentItem.getServerName());
         TextView serverApplication = (TextView) listItemView.findViewById(R.id.server_application);
-        serverApplication.setText(currentItem.getServerAppName());
+        serverApplication.setText("Server: " + currentItem.getServerAppName());
         // Create the TextView to show the incident message information
         TextView messageContent = (TextView) listItemView.findViewById(R.id.message_content);
-        messageContent.setText(currentItem.getMessageContent());
+        String contentMessage = currentItem.getMessageContent(); // Get the ArrayList which contains the message content
+        messageContent.setText(contentMessage); // Show the messages content
 
         return listItemView;
     }
