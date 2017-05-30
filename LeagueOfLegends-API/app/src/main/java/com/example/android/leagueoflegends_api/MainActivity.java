@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity
 
         // Create the TextView object
         TextView serverStatus = (TextView) findViewById(R.id.server_status);
-
         // Create the ClickListener for the TextView objects
         serverStatus.setOnClickListener(new View.OnClickListener()
         {
@@ -25,6 +24,17 @@ public class MainActivity extends AppCompatActivity
             {
                 Intent serverStatusIntent = new Intent(MainActivity.this, ServerStatusActivity.class);
                 startActivity(serverStatusIntent);
+            }
+        });
+
+        TextView champions = (TextView) findViewById(R.id.champions);
+        champions.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent championsIntent = new Intent(MainActivity.this, ChampionsActivity.class);
+                startActivity(championsIntent);
             }
         });
     }

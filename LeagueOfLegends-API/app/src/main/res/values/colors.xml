@@ -17,4 +17,7 @@
     <color name="list_item_text_color2">#ff9100</color>
 
     <color name="text_status_color">#616161</color>
+
+    <color name="champion_title">#757575</color>
+    <color name="champion_name">#212121</color>
 </resources>

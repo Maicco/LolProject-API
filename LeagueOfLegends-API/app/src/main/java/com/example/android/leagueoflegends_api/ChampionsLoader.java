@@ -5,11 +5,11 @@ import android.content.Context;
 
 import java.util.List;
 
-public class ServerStatusLoader extends AsyncTaskLoader<List<ServerStatus>>
+public class ChampionsLoader extends AsyncTaskLoader<List<Champions>>
 {
     private String mUrl;
 
-    public ServerStatusLoader(Context context, String url)
+    public ChampionsLoader(Context context, String url)
     {
         super(context);
         mUrl = url;
@@ -22,13 +22,13 @@ public class ServerStatusLoader extends AsyncTaskLoader<List<ServerStatus>>
     }
 
     @Override
-    public List<ServerStatus> loadInBackground()
+    public List<Champions> loadInBackground()
     {
         if(mUrl == null)
             return null;
 
         // Makes a network request, then decodefies the answer, and extracts an StatusServer list
-        List<ServerStatus> status = ServerStatusUtils.fetchServerStatusData(mUrl);
-        return status;
+        List<Champions> champions = ChampionsUtils.fetchChampionsData(mUrl);
+        return champions;
     }
 }

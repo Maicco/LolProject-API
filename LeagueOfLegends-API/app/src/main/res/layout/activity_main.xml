@@ -18,8 +18,10 @@
 
     <FrameLayout style="@style/FrameLayoutItems">
         <TextView
+            android:id="@+id/champions"
             style="@style/MainActivityItems"
-            tools:text="Option 2" />
+            android:text="@string/champions"
+            tools:text="Champions" />
     </FrameLayout>
 
     <FrameLayout style="@style/FrameLayoutItems">
