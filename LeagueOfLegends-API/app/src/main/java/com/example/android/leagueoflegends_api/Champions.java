@@ -19,6 +19,8 @@ public class Champions
         mChampionTitle = championTitle;
     }
 
+    public Champions(){}
+
     public int getChampionId()
     {
         return mChampionId;

@@ -32,7 +32,7 @@ public class ChampionsAdapter extends ArrayAdapter<Champions>
 
         // Create an ImageView object to get and set the champions images
         ImageView championImage = (ImageView) listItemView.findViewById(R.id.champion_image);
-        championImage.setImageResource(getChampionImage(currentItem.getChampionKey()));
+        championImage.setImageResource(R.drawable.yasuo);
 
         TextView championName = (TextView) listItemView.findViewById(R.id.champion_name);
         championName.setText(currentItem.getChampionName());
@@ -43,10 +43,10 @@ public class ChampionsAdapter extends ArrayAdapter<Champions>
         return listItemView;
     }
 
-    private int getChampionImage(String championKey)
+    /*private int getChampionImage(String championKey)
     {
         int drawable = Integer.parseInt(getContext().getResources().getDrawable(R.drawable.yasuo).toString());
 
         return drawable;
-    }
+    }*/
 }
