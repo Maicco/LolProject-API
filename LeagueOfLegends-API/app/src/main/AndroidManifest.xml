@@ -25,9 +25,13 @@
             android:label="@string/server_status"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".ChampionsActivity"
-            android:label="@string/champions"
+            android:name=".SetSummonerNameActivity"
+            android:label="@string/search_match"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SearchSummonerActivity"
+            android:label="@string/search_match"
+            android:parentActivityName=".SetSummonerNameActivity"/>
     </application>
 
 </manifest>

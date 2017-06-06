@@ -2,7 +2,10 @@
     <string name="app_name">LOL - API</string>
     <!-- Strings used at main activity items -->
     <string name="server_status">Server Status</string>
-    <string name="champions">Champions</string>
+    <string name="search_match">Search match</string>
+
+    <string name="insert_summoner_name">Type Summoner name</string>
+    <string name="send">Send</string>
 
     <string name="online">Online</string>
     <string name="warning">Warning</string>

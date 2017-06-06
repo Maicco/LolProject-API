@@ -20,4 +20,9 @@
 
     <color name="champion_title">#757575</color>
     <color name="champion_name">#212121</color>
+
+    <color name="button_color">#d50000</color>
+
+    <color name="blue_team">#0d47a1</color>
+    <color name="red_team">#b71c1c</color>
 </resources>
