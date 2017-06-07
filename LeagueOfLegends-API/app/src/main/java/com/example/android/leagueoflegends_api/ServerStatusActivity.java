@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -116,6 +115,4 @@ public class ServerStatusActivity extends AppCompatActivity implements LoaderCal
     {
         mAdapter.clear();
     }
-
-
 }

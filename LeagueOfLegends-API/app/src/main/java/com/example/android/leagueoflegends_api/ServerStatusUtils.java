@@ -74,7 +74,7 @@ public final class ServerStatusUtils
     /**
      * Creates the url to request the data from the website
      * @param stringUrl is the URL received
-     * @return a URL object from the URL received
+     * @return an URL object from the URL received
      */
     private static URL createUrl(String stringUrl)
     {
@@ -85,7 +85,7 @@ public final class ServerStatusUtils
         }
         catch (MalformedURLException e)
         {
-            Log.e(LOG_TAG, "Problem bulding the URL ", e);
+            Log.e(LOG_TAG, "Problem building the URL ", e);
         }
 
         return url;
@@ -101,7 +101,7 @@ public final class ServerStatusUtils
     {
        String jsonResponse = "";
 
-        // If the URL is null, the return early.
+        // If the URL is null, then return early.
         if(url == null)
             return jsonResponse;
 
@@ -118,7 +118,7 @@ public final class ServerStatusUtils
             urlConnection.connect();
 
             /**
-             * If the request was not succeed (response code 200), then read the data entry and decodefied the answer
+             * If the request was not succeed (response code 200), then read the data entry and decode the answer
              */
             if(urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK)
             {
@@ -130,7 +130,7 @@ public final class ServerStatusUtils
         }
         catch (IOException e)
         {
-            Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
+            Log.e(LOG_TAG, "Problem retrieving the server status JSON results.", e);
         }
         finally
         {

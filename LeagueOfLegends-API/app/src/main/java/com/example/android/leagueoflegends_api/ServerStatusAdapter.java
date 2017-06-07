@@ -26,7 +26,7 @@ public class ServerStatusAdapter extends ArrayAdapter<ServerStatus>
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if(listItemView == null)
-            listItemView = LayoutInflater.from((getContext())).inflate(R.layout.server_status_list_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.server_status_list_item, parent, false);
 
         // Select the item at the List View
         ServerStatus currentItem = getItem(position);

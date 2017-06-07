@@ -12,14 +12,14 @@
         <TextView
             android:id="@+id/server_status"
             style="@style/MainActivityItems"
-            android:text="@string/server_status"
-            tools:text="Server Status" />
+            android:text="@string/server_status" />
     </FrameLayout>
 
     <FrameLayout style="@style/FrameLayoutItems">
         <TextView
+            android:id="@+id/summoner"
             style="@style/MainActivityItems"
-            tools:text="Option 2" />
+            android:text="@string/search_summoner" />
     </FrameLayout>
 
     <FrameLayout style="@style/FrameLayoutItems">
@@ -33,7 +33,6 @@
         android:layout_marginBottom="4dp">
         <TextView
             style="@style/MainActivityItems"
-            android:layout_marginBottom="4dp"
             tools:text="Option 4" />
     </FrameLayout>
 

@@ -2,6 +2,10 @@
     <string name="app_name">LOL - API</string>
     <!-- Strings used at main activity items -->
     <string name="server_status">Server Status</string>
+    <string name="search_summoner">Search Summoner</string>
+
+    <string name="insert_summoner_name">Type Summoner name</string>
+    <string name="send">Send</string>
 
     <string name="online">Online</string>
     <string name="warning">Warning</string>
@@ -12,4 +16,11 @@
 
     <string name="there_are_no_info">There are no info.</string>
     <string name="none">None</string>
+
+    <string name="queue">Queue: </string>
+    <string name="league">League: </string>
+    <string name="tier">Tier: </string>
+    <string name="league_points">PDL: </string>
+    <string name="wins">Wins: </string>
+    <string name="losses">Losses: </string>
 </resources>

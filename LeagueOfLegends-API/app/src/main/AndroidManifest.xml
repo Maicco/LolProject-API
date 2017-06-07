@@ -3,7 +3,7 @@
     package="com.example.android.leagueoflegends_api">
 
     <!-- Ask for permissions to the user -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -20,7 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ServerStatusActivity" android:label="@string/server_status" android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ServerStatusActivity"
+            android:label="@string/server_status"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SetSummonerNameActivity"
+            android:label="@string/search_match"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SearchSummonerActivity"
+            android:label="@string/search_match"
+            android:parentActivityName=".SetSummonerNameActivity"/>
     </application>
 
 </manifest>

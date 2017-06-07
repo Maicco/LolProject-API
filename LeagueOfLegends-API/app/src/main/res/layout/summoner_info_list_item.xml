@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/queue_text_view"
+        style="@style/SummonerInfoListItem"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/queue"/>
+
+    <TextView
+        android:id="@+id/queue_name_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/queue_text_view"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/text_color_summoner_list_item"
+        tools:text="RANKED_SOLO_5x5"/>
+
+    <TextView
+        android:id="@+id/league_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_below="@id/queue_text_view"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/league"/>
+
+    <TextView
+        android:id="@+id/league_name_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/league_text_view"
+        android:layout_below="@id/queue_name_text_view"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_color_summoner_list_item"
+        tools:text="Xin Zhao's Sentries"/>
+
+    <TextView
+        android:id="@+id/tier_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_below="@id/league_text_view"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/tier"/>
+
+    <TextView
+        android:id="@+id/tier_name_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/tier_text_view"
+        android:layout_below="@id/league_name_text_view"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color_summoner_list_item"
+        tools:text="Bronze"/>
+
+    <TextView
+        android:id="@+id/tier_level_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/tier_name_text_view"
+        android:layout_below="@id/league_name_text_view"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color_summoner_list_item"
+        tools:text="I"/>
+
+    <TextView
+        android:id="@+id/league_points_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_below="@id/league_name_text_view"
+        android:layout_toRightOf="@id/tier_level_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/league_points"/>
+
+    <TextView
+        android:id="@+id/pdl_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/league_points_text_view"
+        android:layout_below="@id/league_name_text_view"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/list_item_text_color2"
+        tools:text="35"/>
+
+    <TextView
+        android:id="@+id/wins_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_below="@id/tier_text_view"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/wins"/>
+
+    <TextView
+        android:id="@+id/wins_number_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/wins_text_view"
+        android:layout_below="@id/tier_name_text_view"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/wins_color"
+        tools:text="31"/>
+
+    <TextView
+        android:id="@+id/losses_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/wins_number_text_view"
+        android:layout_below="@id/tier_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/losses"/>
+
+    <TextView
+        android:id="@+id/losses_number_text_view"
+        style="@style/SummonerInfoListItem"
+        android:layout_toRightOf="@id/losses_text_view"
+        android:layout_below="@id/tier_name_text_view"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="true"
+        android:textColor="@color/losses_color"
+        tools:text="45"/>
+
+</RelativeLayout>
