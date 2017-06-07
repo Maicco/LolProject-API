@@ -25,4 +25,8 @@
 
     <color name="blue_team">#0d47a1</color>
     <color name="red_team">#b71c1c</color>
+
+    <color name="wins_color">#4caf50</color>
+    <color name="losses_color">#f44336</color>
+    <color name="text_color_summoner_list_item">#424242</color>
 </resources>

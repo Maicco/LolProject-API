@@ -28,14 +28,6 @@ public class ServerStatus
         mSeverity = severity;
     }
 
-    public ServerStatus(String serverName, String regionTag, String serverAppName, String serverStatus)
-    {
-        mServerName = serverName;
-        mRegionTag = regionTag;
-        mServerAppName = serverAppName;
-        mServerStatus = serverStatus;
-    }
-
     public String getServerName() {
         return mServerName;
     }

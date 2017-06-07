@@ -9,6 +9,8 @@ import android.widget.EditText;
 
 public class SetSummonerNameActivity extends AppCompatActivity
 {
+    private static String summonerName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,8 +23,13 @@ public class SetSummonerNameActivity extends AppCompatActivity
         Log.v("class:", "click ok");
         Intent intent = new Intent(SetSummonerNameActivity.this, SearchSummonerActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_text_summoner);
-        String summonerName = editText.getText().toString();
+        summonerName = editText.getText().toString();
 
-        //startActivity(intent);
+        startActivity(intent);
+    }
+
+    public static String getSummonerName()
+    {
+        return summonerName;
     }
 }

@@ -19,7 +19,7 @@
         <TextView
             android:id="@+id/summoner"
             style="@style/MainActivityItems"
-            android:text="@string/search_match" />
+            android:text="@string/search_summoner" />
     </FrameLayout>
 
     <FrameLayout style="@style/FrameLayoutItems">
