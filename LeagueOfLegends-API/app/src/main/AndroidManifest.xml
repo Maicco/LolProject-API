@@ -26,11 +26,11 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SetSummonerNameActivity"
-            android:label="@string/search_match"
+            android:label="@string/search_summoner"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".SearchSummonerActivity"
-            android:label="@string/search_match"
+            android:label="@string/search_summoner"
             android:parentActivityName=".SetSummonerNameActivity"/>
     </application>
 
