@@ -35,7 +35,6 @@ public class ChampionListAdapter extends ArrayAdapter<Champion>
         try
         {
             int imageId = R.drawable.class.getField(currentItem.getChampionKey()).getInt(null);
-            Log.v(LOG_TAG, "Drawable resource: "+imageId);
             championIcon.setImageResource(imageId);
         }
         catch (NoSuchFieldException e)

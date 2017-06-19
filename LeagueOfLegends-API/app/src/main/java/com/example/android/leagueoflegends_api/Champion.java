@@ -14,6 +14,7 @@ public class Champion
 
     /*public Champion(int id, String key, String name, String title, ArrayList<String> tags)
     {
+    ok
         mChampionId = id;
         mChampionKey = key;
         mChampionName = name;
