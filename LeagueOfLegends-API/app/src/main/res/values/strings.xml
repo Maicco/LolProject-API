@@ -3,6 +3,7 @@
     <!-- Strings used at main activity items -->
     <string name="server_status">Server Status</string>
     <string name="search_summoner">Search Summoner</string>
+    <string name="champions">Champions</string>
 
     <string name="insert_summoner_name">Type Summoner name</string>
     <string name="send">Send</string>
