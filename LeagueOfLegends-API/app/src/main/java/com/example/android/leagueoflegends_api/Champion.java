@@ -28,7 +28,7 @@ public class Champion
     }
 
     public String getChampionKey() {
-        return key;
+        return key.toLowerCase();
     }
 
     public String getChampionName() {
