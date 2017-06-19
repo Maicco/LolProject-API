@@ -1,16 +1,9 @@
 package com.example.android.leagueoflegends_api;
 
 import android.app.Activity;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ChampionListAdapter extends ArrayAdapter<Champion>
 {
@@ -21,7 +14,7 @@ public class ChampionListAdapter extends ArrayAdapter<Champion>
         super(context, 0, champions);
     }
 
-    @Override
+    /*@Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View listItemView = convertView;
@@ -54,5 +47,5 @@ public class ChampionListAdapter extends ArrayAdapter<Champion>
         championTags.setText(Arrays.toString(currentItem.getChampionTags().toArray()));
 
         return listItemView;
-    }
+    }*/
 }
