@@ -15,7 +15,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+
+/**
+ * The Champion List Activity itself
+ */
 
 public class ChampionsListActivity extends AppCompatActivity implements LoaderCallbacks<List<Champion>>
 {
@@ -29,10 +34,16 @@ public class ChampionsListActivity extends AppCompatActivity implements LoaderCa
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        mAdapter = new ChampionListAdapter(this, new ArrayList<Champion>());
+        mAdapter.sort(new Comparator<Champion>() {
+            @Override
+            public int compare(Champion c1, Champion c2) {
+                return c1.getChampionKey().compareToIgnoreCase(c2.getChampionKey());
+            }
+        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_champions_list);
 
-        mAdapter = new ChampionListAdapter(this, new ArrayList<Champion>());
         ListView listView = (ListView) findViewById(R.id.champions_list_view);
         listView.setAdapter(mAdapter);
         mEmptyStateTextView = (TextView) findViewById(R.id.champions_empty_view);

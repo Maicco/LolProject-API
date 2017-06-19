@@ -1,27 +1,18 @@
 package com.example.android.leagueoflegends_api;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Champion {
-    private int mChampionId;
-    private String mChampionKey, mChampionName, mChampionTitle;
-    private ArrayList<String> mChampionTags;
+/**
+ * Class used to store the champion data received from Riot's server
+ */
 
+public class Champion
+{
     private int id;
     private String key, name, title;
     private List<String> tags;
 
-    public Champion(int id, String key, String name, String title, ArrayList<String> tags) {
-        mChampionId = id;
-        mChampionKey = key;
-        mChampionName = name;
-        mChampionTitle = title;
-        mChampionTags = tags;
-    }
-
-    public Champion() {
-    }
+    public Champion() {}
 
     public int getChampionId() {
         return id;

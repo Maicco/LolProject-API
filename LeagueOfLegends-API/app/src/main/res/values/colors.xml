@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D50000</color>
     <!-- Colors used at main activity layout -->
-    <color name="backgroung_color">#212121</color>
+    <color name="background_color">#212121</color>
     <color name="main_activity_items_color">#D50000</color>
     <color name="text_color">#FFFFFF</color>
 
@@ -14,12 +14,13 @@
     <color name="status_offline">#D93218</color>
 
     <color name="list_item_text_color1">#1a237e</color>
-    <color name="list_item_text_color2">#ff9100</color>
+    <color name="list_item_text_color2">#ffffff</color>
 
     <color name="text_status_color">#616161</color>
 
     <color name="champion_title">#757575</color>
     <color name="champion_name">#212121</color>
+    <color name="champion_tag_text_color">#b71c1c</color>
 
     <color name="button_color">#d50000</color>
 
@@ -29,4 +30,6 @@
     <color name="wins_color">#4caf50</color>
     <color name="losses_color">#f44336</color>
     <color name="text_color_summoner_list_item">#424242</color>
+    
+    <color name="champion_background_color">#ffab00</color>
 </resources>

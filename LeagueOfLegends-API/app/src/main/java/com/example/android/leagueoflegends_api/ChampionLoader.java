@@ -14,6 +14,7 @@ import com.google.gson.JsonParser;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -56,9 +57,11 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
             e.printStackTrace();
         }
 
+        // Get the URL
         URL url = HttpConnectionUtils.createUrl(championUrl);
         String jsonResponse = null;
 
+        // Get the JSON from the server
         try
         {
             jsonResponse = HttpConnectionUtils.makeHttpRequest(url);
@@ -70,6 +73,8 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
 
         List<Champion> champions = extractFeatureFromJson(jsonResponse);
 
+
+
         return champions;
     }
 
@@ -79,11 +84,10 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
             return null;
 
         List<Champion> champions = new ArrayList<>();
-        Log.v(LOG_TAG, "championsList: OK");
 
         try
         {
-            //Read the JSON file
+            //Read the JSON
             JsonElement root = new JsonParser().parse(jsonResponse);
 
             //Get the content of the first map
@@ -101,6 +105,14 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
         {
             Log.e(LOG_TAG, "Problem parsing the ChampionData JSON results. ", e);
         }
+
+        //noinspection Since15
+        champions.sort(new Comparator<Champion>() {
+            @Override
+            public int compare(Champion c1, Champion c2) {
+                return c1.getChampionKey().compareTo(c2.getChampionKey());
+            }
+        });
 
         return champions;
     }

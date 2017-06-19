@@ -11,6 +11,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Class used to handle the champions list
+ */
+
 public class ChampionListAdapter extends ArrayAdapter<Champion>
 {
     private static String LOG_TAG = ChampionListAdapter.class.getSimpleName();
@@ -29,10 +33,12 @@ public class ChampionListAdapter extends ArrayAdapter<Champion>
 
         Champion currentItem = getItem(position);
 
+        // Create the ImageView object handler
         ImageView championIcon = (ImageView) listItemView.findViewById(R.id.icon_image_view);
-
+        // Exceptions handler
         try
         {
+            // Get the Champion Key name and convert it to a resource id to get the image
             int imageId = R.drawable.class.getField(currentItem.getChampionKey()).getInt(null);
             championIcon.setImageResource(imageId);
         }
@@ -45,6 +51,7 @@ public class ChampionListAdapter extends ArrayAdapter<Champion>
             e.printStackTrace();
         }
 
+        // Create the objects to handle the TextViews at List View
         TextView championName = (TextView) listItemView.findViewById(R.id.champion_name_text_view);
         championName.setText(currentItem.getChampionName());
         TextView championTitle = (TextView) listItemView.findViewById(R.id.champion_title_text_view);
