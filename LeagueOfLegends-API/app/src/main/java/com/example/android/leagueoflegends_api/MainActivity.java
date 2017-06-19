@@ -37,5 +37,16 @@ public class MainActivity extends AppCompatActivity
                 startActivity(summonerNameIntent);
             }
         });
+
+        TextView champions = (TextView) findViewById(R.id.champions);
+        champions.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent championsIntent = new Intent(MainActivity.this, ChampionsListActivity.class);
+                startActivity(championsIntent);
+            }
+        });
     }
 }
