@@ -3,7 +3,7 @@
     xmlns:style="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:background="@color/champion_background_color"
     android:orientation="horizontal"
     android:paddingBottom="8dp"
@@ -16,6 +16,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/region_tag"
+            style="@style/ListItemTextView"
+            android:layout_gravity="center_vertical"
+            android:gravity="start"
+            android:textColor="@color/list_item_text_color1"
+            tools:text="br1 - Brazil" />
 
         <TextView
             android:id="@+id/status_circle"
@@ -31,7 +39,7 @@
             android:gravity="center_vertical"
             android:textAllCaps="true"
             android:textColor="@color/text_status_color"
-            android:textSize="18sp"
+            android:textSize="14sp"
             tools:text="Online" />
     </LinearLayout>
 
@@ -41,17 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/online_status_linear_layout"
         android:layout_gravity="center_vertical"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/region_tag"
-            style="@style/ListItemTextView"
-            android:layout_gravity="center_vertical"
-            android:gravity="start"
-            android:textColor="@color/list_item_text_color1"
-            tools:text="br1 - Brazil" />
 
         <TextView
             android:id="@+id/server_application"
@@ -69,6 +69,6 @@
         android:layout_below="@id/linear_layout_region_tag_server_application"
         android:textAlignment="center"
         android:textColor="@color/text_color"
-        android:textSize="14sp"
+        android:textSize="12sp"
         tools:text="teste" />
 </RelativeLayout>

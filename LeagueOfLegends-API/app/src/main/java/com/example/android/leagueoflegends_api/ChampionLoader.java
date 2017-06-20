@@ -106,6 +106,7 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
             Log.e(LOG_TAG, "Problem parsing the ChampionData JSON results. ", e);
         }
 
+        // Sort the champions list by alphabetic order
         //noinspection Since15
         champions.sort(new Comparator<Champion>() {
             @Override
