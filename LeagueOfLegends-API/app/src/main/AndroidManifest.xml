@@ -32,9 +32,14 @@
             android:name=".SearchSummonerActivity"
             android:label="@string/search_summoner"
             android:parentActivityName=".SetSummonerNameActivity" />
-        <activity android:name=".ChampionsListActivity"
+        <activity
+            android:name=".ChampionsListActivity"
             android:label="@string/champions"
             android:parentActivityName=".SetSummonerNameActivity" />
+        <activity
+            android:name=".SingleChampionActivity"
+            android:label="@string/champions"
+            android:parentActivityName=".ChampionsListActivity"/>
     </application>
 
 </manifest>

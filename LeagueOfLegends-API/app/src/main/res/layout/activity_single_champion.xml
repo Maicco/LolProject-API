@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:background="@color/background_color"
     android:layout_height="match_parent"
-    tools:context="com.example.android.leagueoflegends_api.ServerStatusActivity">
+    tools:context="com.example.android.leagueoflegends_api.SingleChampionActivity">
 
     <ListView
-        android:id="@+id/champions_list_view"
+        android:id="@+id/single_champion_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:drawSelectorOnTop="true"
         android:orientation="vertical" />
 
     <TextView
-        android:id="@+id/champions_empty_view"
+        android:id="@+id/single_champion_empty_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -23,7 +23,7 @@
         android:textAppearance="?android:textAppearanceLarge"/>
 
     <ProgressBar
-        android:id="@+id/champions_loading_spinner"
+        android:id="@+id/single_champion_loading_spinner"
         style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

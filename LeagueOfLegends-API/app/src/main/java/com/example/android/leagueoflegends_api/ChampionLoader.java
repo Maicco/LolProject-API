@@ -73,8 +73,6 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
 
         List<Champion> champions = extractFeatureFromJson(jsonResponse);
 
-
-
         return champions;
     }
 
@@ -108,9 +106,11 @@ public class ChampionLoader extends AsyncTaskLoader<List<Champion>>
 
         // Sort the champions list by alphabetic order
         //noinspection Since15
-        champions.sort(new Comparator<Champion>() {
+        champions.sort(new Comparator<Champion>()
+        {
             @Override
-            public int compare(Champion c1, Champion c2) {
+            public int compare(Champion c1, Champion c2)
+            {
                 return c1.getChampionKey().compareTo(c2.getChampionKey());
             }
         });
