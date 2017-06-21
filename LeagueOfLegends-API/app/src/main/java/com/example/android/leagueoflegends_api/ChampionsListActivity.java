@@ -3,6 +3,7 @@ package com.example.android.leagueoflegends_api;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -30,6 +31,7 @@ public class ChampionsListActivity extends AppCompatActivity implements LoaderCa
     private static final int SUMMONER_LOADER_ID = 1;
     private TextView mEmptyStateTextView;
     private ProgressBar mLoadingSpinner;
+    public static Champion champion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,7 +71,10 @@ public class ChampionsListActivity extends AppCompatActivity implements LoaderCa
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Champion champion = mAdapter.getItem(position);
+                champion = mAdapter.getItem(position);
+
+                Intent intent = new Intent(ChampionsListActivity.this, SingleChampionActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -32,4 +32,11 @@
     <color name="text_color_summoner_list_item">#424242</color>
     
     <color name="champion_background_color">#ffab00</color>
+
+    <color name="single_champion_background_color">#f5f5f5</color>
+
+    <color name="attack_bar_color">#b71c1c</color>
+    <color name="defense_bar_color">#1b5e20</color>
+    <color name="magic_bar_color">#0277bd</color>
+    <color name="difficult_bar_color">#311b92</color>
 </resources>

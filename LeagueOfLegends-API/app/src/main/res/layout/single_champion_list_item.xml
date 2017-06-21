@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/single_champion_background_color"
+    android:drawSelectorOnTop="true"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/sc_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/annie" />
+
+    <TextView
+        android:id="@+id/sc_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_image_view"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:textColor="@color/champion_name"
+        android:textSize="14sp"
+        tools:text="The Dark Child" />
+
+    <TextView
+        android:id="@+id/sc_stats_text_view"
+        style="@style/single_champion_titles_text_view"
+        android:layout_below="@id/sc_title_text_view"
+        android:fontFamily="sans-serif"
+        android:paddingTop="8dp"
+        android:text="Stats" />
+
+    <ImageView
+        android:id="@+id/sc_attack_image_view"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_stats_text_view"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/attack_icon" />
+
+    <ProgressBar
+        android:id="@+id/sc_attack_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_stats_text_view"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/sc_attack_image_view"
+        android:indeterminate="false"
+        android:max="10"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:progress="2" />
+
+    <ImageView
+        android:id="@+id/sc_defense_image_view"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_attack_image_view"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shield_icon" />
+
+    <ProgressBar
+        android:id="@+id/sc_defense_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_attack_image_view"
+        android:layout_toRightOf="@id/sc_defense_image_view"
+        android:indeterminate="false"
+        android:max="10"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:progress="3" />
+
+    <ImageView
+        android:id="@+id/sc_magic_image_view"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_defense_image_view"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/magic_icon" />
+
+    <ProgressBar
+        android:id="@+id/sc_magic_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_defense_image_view"
+        android:layout_toRightOf="@id/sc_magic_image_view"
+        android:indeterminate="false"
+        android:max="10"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:progress="10" />
+
+    <ImageView
+        android:id="@+id/sc_difficult_image_view"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_magic_image_view"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/difficult_icon" />
+
+    <ProgressBar
+        android:id="@+id/sc_difficult_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/sc_magic_image_view"
+        android:layout_toRightOf="@id/sc_difficult_image_view"
+        android:indeterminate="false"
+        android:max="10"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:progress="6" />
+
+    <TextView
+        android:id="@+id/sc_abilities_text_view"
+        style="@style/single_champion_titles_text_view"
+        android:layout_below="@id/sc_difficult_image_view"
+        android:fontFamily="sans-serif"
+        android:paddingTop="16dp"
+        android:text="Abilities" />
+
+    <LinearLayout
+        android:id="@+id/sc_abilities_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_abilities_text_view"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sc_skill_passive_image_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/annie_passive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sc_skill_0_image_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/annie_q" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sc_skill_1_image_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/annie_w" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sc_skill_2_image_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/annie_e" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sc_skill_3_image_view"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/annie_r1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sc_attributes_text_view"
+        style="@style/single_champion_titles_text_view"
+        android:layout_below="@id/sc_abilities_linear_layout"
+        android:fontFamily="sans-serif"
+        android:paddingTop="8dp"
+        android:text="Attributes" />
+
+    <TextView
+        android:id="@+id/sc_tags_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_attributes_text_view"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        tools:text="Mage" />
+
+    <TextView
+        android:id="@+id/sc_story_text_view"
+        style="@style/single_champion_titles_text_view"
+        android:layout_below="@id/sc_tags_text_view"
+        android:fontFamily="sans-serif"
+        android:paddingTop="16dp"
+        android:text="Story" />
+
+    <TextView
+        android:id="@+id/sc_lore_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_story_text_view"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        tools:text="There have always been those within Noxus who did not agree with the evils perpetrated by the Noxian High Command. The High Command had just put down a coup attempt from the self-proclaimed Crown Prince Raschallion, and a crackdown on any form of..." />
+
+</RelativeLayout>
