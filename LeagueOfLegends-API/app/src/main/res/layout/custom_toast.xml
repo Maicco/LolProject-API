@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_toast_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="8dp"
+        android:background="@color/champion_background_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/toast_passive_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textAllCaps="true"
+            android:textColor="@color/red_team"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            tools:text="TEXT" />
+
+        <LinearLayout
+            android:id="@+id/toast_cooldown_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Cooldown: "
+                android:textAllCaps="true"
+                android:textColor="@color/red_team"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/toast_cooldown_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="16/14/12/10/8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toast_cost_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Cost: "
+                android:textAllCaps="true"
+                android:textColor="@color/red_team"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/toast_cost_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="80/90/100/110/120" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/toast_passive_description_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            tools:text="TEXT" />
+    </LinearLayout>
+</RelativeLayout>

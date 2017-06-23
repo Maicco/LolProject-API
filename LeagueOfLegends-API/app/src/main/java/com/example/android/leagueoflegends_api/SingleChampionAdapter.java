@@ -67,15 +67,79 @@ public class SingleChampionAdapter extends ArrayAdapter<SingleChampion>
 
         // Skill Icons
         ImageView passive = (ImageView) listItemView.findViewById(R.id.sc_skill_passive_image_view);
-        passive.setImageResource(R.drawable.annie_passive);
+        try
+        {
+            int imageId = R.drawable.class.getField(currentItem.getPassiveImage()).getInt(null);
+            passive.setImageResource(imageId);
+        }
+        catch (NoSuchFieldException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+
         ImageView skill0 = (ImageView) listItemView.findViewById(R.id.sc_skill_0_image_view);
-        skill0.setImageResource(R.drawable.annie_q);
+        try
+        {
+            int imageId = R.drawable.class.getField(currentItem.getSkill0Image()).getInt(null);
+            skill0.setImageResource(imageId);
+        }
+        catch (NoSuchFieldException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+
         ImageView skill1 = (ImageView) listItemView.findViewById(R.id.sc_skill_1_image_view);
-        skill1.setImageResource(R.drawable.annie_w);
+        try
+        {
+            int imageId = R.drawable.class.getField(currentItem.getSkill1Image()).getInt(null);
+            skill1.setImageResource(imageId);
+        }
+        catch (NoSuchFieldException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+
         ImageView skill2 = (ImageView) listItemView.findViewById(R.id.sc_skill_2_image_view);
-        skill2.setImageResource(R.drawable.annie_e);
+        try
+        {
+            int imageId = R.drawable.class.getField(currentItem.getSkill2Image()).getInt(null);
+            skill2.setImageResource(imageId);
+        }
+        catch (NoSuchFieldException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+
         ImageView skill3 = (ImageView) listItemView.findViewById(R.id.sc_skill_3_image_view);
-        skill3.setImageResource(R.drawable.annie_r1);
+        try
+        {
+            int imageId = R.drawable.class.getField(currentItem.getSkill3Image()).getInt(null);
+            skill3.setImageResource(imageId);
+        }
+        catch (NoSuchFieldException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
 
         // Attributes/tags and champion story
         TextView tags = (TextView) listItemView.findViewById(R.id.sc_tags_text_view);

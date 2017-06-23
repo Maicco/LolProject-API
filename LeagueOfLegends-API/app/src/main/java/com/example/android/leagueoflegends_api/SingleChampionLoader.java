@@ -92,41 +92,42 @@ public class SingleChampionLoader extends AsyncTaskLoader<List<SingleChampion>>
 
             JSONObject passiveObj = jsonObject.getJSONObject("passive");
             String passiveName = passiveObj.getString("name");
-            String passiveDescription = passiveObj.getString("description");
+            String passiveDescription = passiveObj.getString("sanitizedDescription");
 
             String tags = jsonObject.getJSONArray("tags").toString();
 
             String key = jsonObject.getString("key");
+            String name = jsonObject.getString("name");
 
             JSONArray spellsArray = jsonObject.getJSONArray("spells");
             JSONObject spell0 = spellsArray.getJSONObject(0);
             String skillName0 = spell0.getString("name");
-            String skillDescription0 = spell0.getString("description");
+            String skillDescription0 = spell0.getString("sanitizedDescription");
             String costBurn0 = spell0.getString("costBurn");
             String cooldownBurn0 = spell0.getString("cooldownBurn");
 
             JSONObject spell1 = spellsArray.getJSONObject(1);
             String skillName1 = spell1.getString("name");
-            String skillDescription1 = spell1.getString("description");
+            String skillDescription1 = spell1.getString("sanitizedDescription");
             String costBurn1 = spell1.getString("costBurn");
             String cooldownBurn1 = spell1.getString("cooldownBurn");
 
             JSONObject spell2 = spellsArray.getJSONObject(2);
             String skillName2 = spell2.getString("name");
-            String skillDescription2 = spell2.getString("description");
+            String skillDescription2 = spell2.getString("sanitizedDescription");
             String costBurn2 = spell2.getString("costBurn");
             String cooldownBurn2 = spell2.getString("cooldownBurn");
 
             JSONObject spell3 = spellsArray.getJSONObject(3);
             String skillName3 = spell3.getString("name");
-            String skillDescription3 = spell3.getString("description");
+            String skillDescription3 = spell3.getString("sanitizedDescription");
             String costBurn3 = spell3.getString("costBurn");
             String cooldownBurn3 = spell3.getString("cooldownBurn");
 
             singleChampion.add(new SingleChampion(title, attack, defense, magic, difficult, passiveName, passiveDescription,
                     tags, skillName0, skillDescription0, skillName1, skillDescription1, skillName2, skillDescription2,
                     skillName3, skillDescription3, costBurn0, cooldownBurn0, costBurn1, cooldownBurn1, costBurn2, cooldownBurn2,
-                    costBurn3, cooldownBurn3, lore, key));
+                    costBurn3, cooldownBurn3, lore, key, name));
         }
         catch (JSONException e)
         {

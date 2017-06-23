@@ -8,14 +8,14 @@ public class SingleChampion
     private String tags;
     private String skillName0, skillDescription0, skillName1, skillDescription1, skillName2, skillDescription2, skillName3, skillDescription3;
     private String costBurn0, cooldownBurn0, costBurn1, cooldownBurn1, costBurn2, cooldownBurn2, costBurn3, cooldownBurn3;
-    private String lore, key;
+    private String lore, key, name;
 
     public SingleChampion(String title, int attack, int defense, int magic, int difficult, String passiveName,
                           String passiveDescription, String tags, String skillName0, String skillDescription0,
                           String skillName1, String skillDescription1, String skillName2, String skillDescription2,
                           String skillName3, String skillDescription3,
                           String costBurn0, String cooldownBurn0, String costBurn1, String cooldownBurn1, String costBurn2, String cooldownBurn2,
-                          String costBurn3, String cooldownBurn3, String lore, String key)
+                          String costBurn3, String cooldownBurn3, String lore, String key, String name)
     {
         this.title = title;
         this.attack = attack;
@@ -43,6 +43,7 @@ public class SingleChampion
         this.cooldownBurn3 = cooldownBurn3;
         this.lore = lore;
         this.key = key;
+        this.name = name;
     }
 
     public String getTitle() {
@@ -148,5 +149,35 @@ public class SingleChampion
     public String getKey()
     {
         return key.toLowerCase();
+    }
+
+    public String getPassiveImage()
+    {
+        return key.toLowerCase()+"_passive";
+    }
+
+    public String getSkill0Image()
+    {
+        return key.toLowerCase()+"_q";
+    }
+
+    public String getSkill1Image()
+    {
+        return key.toLowerCase()+"_w";
+    }
+
+    public String getSkill2Image()
+    {
+        return key.toLowerCase()+"_e";
+    }
+
+    public String getSkill3Image()
+    {
+        return key.toLowerCase()+"_r";
+    }
+
+    public String getName()
+    {
+        return name.toUpperCase();
     }
 }
