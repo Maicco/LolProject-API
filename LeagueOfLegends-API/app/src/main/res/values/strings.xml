@@ -24,4 +24,15 @@
     <string name="league_points">PDL: </string>
     <string name="wins">Wins: </string>
     <string name="losses">Losses: </string>
+
+    <string name="stats">Stats</string>
+    <string name="abilities">Abilities</string>
+    <string name="attributes">Attributes</string>
+    <string name="story">Story</string>
+
+    <string name="passive">Passive</string>
+    <string name="q">Q</string>
+    <string name="w">W</string>
+    <string name="e">E</string>
+    <string name="r">R</string>
 </resources>
