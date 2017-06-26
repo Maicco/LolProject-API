@@ -18,8 +18,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:textColor="@android:color/white"
-        android:textAppearance="?android:textAppearanceLarge"/>
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="No data received."/>
 
     <ProgressBar
         android:id="@+id/single_champion_loading_spinner"

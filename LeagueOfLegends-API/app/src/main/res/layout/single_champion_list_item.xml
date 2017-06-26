@@ -261,7 +261,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:scaleType="centerCrop"
-                tools:src="@drawable/annie_r1"
+                tools:src="@drawable/annie_r"
                 android:drawSelectorOnTop="true"
                 android:onClick="skill3Toast"/>
         </LinearLayout>
