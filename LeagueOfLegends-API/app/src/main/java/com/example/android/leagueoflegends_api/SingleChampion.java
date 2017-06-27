@@ -47,7 +47,7 @@ public class SingleChampion
     }
 
     public String getTitle() {
-        return title;
+        return title.toUpperCase();
     }
 
     public int getAttack() {
@@ -148,7 +148,7 @@ public class SingleChampion
 
     public String getKey()
     {
-        return key.toLowerCase();
+        return key.toLowerCase()+"_splash_0";
     }
 
     public String getPassiveImage()

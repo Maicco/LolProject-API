@@ -34,9 +34,9 @@ public class SingleChampionAdapter extends ArrayAdapter<SingleChampion>
 
         // Champion Image
         ImageView championImage = (ImageView) listItemView.findViewById(R.id.sc_image_view);
-        championImage.setImageResource(R.drawable.aatrox_0);
+        //championImage.setImageResource(R.drawable.aatrox);
         // Exceptions handler
-        /*try
+        try
         {
             // Get the Champion Key name and convert it to a resource id to get the image
             int imageId = R.drawable.class.getField(currentItem.getKey()).getInt(null);
@@ -49,7 +49,7 @@ public class SingleChampionAdapter extends ArrayAdapter<SingleChampion>
         catch (IllegalAccessException e)
         {
             e.printStackTrace();
-        }*/
+        }
 
         // Champion Stats
         ProgressBar attack = (ProgressBar) listItemView.findViewById(R.id.sc_attack_progress_bar);

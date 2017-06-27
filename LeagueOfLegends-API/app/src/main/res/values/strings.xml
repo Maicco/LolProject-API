@@ -35,4 +35,9 @@
     <string name="w">W</string>
     <string name="e">E</string>
     <string name="r">R</string>
+
+    <string name="title_activity_single_champion_full_screen_image">SingleChampionFullScreenImage
+    </string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
