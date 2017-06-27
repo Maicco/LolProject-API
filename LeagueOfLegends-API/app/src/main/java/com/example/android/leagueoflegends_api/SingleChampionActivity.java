@@ -26,8 +26,8 @@ import java.util.List;
  */
 public class SingleChampionActivity extends AppCompatActivity implements LoaderCallbacks<List<SingleChampion>>
 {
-    private String singleChampionUrl = "https://br1.api.riotgames.com/lol/static-data/v3/champions/" + ChampionsListActivity.champion.getChampionId() + "?locale=en_US&tags=all&api_key=RGAPI-12f35902-57c8-4cd9-aa2e-ba2f18283cd6";
-    private SingleChampionAdapter mAdapter;
+    private String singleChampionUrl = "https://br1.api.riotgames.com/lol/static-data/v3/champions/" + ChampionsListActivity.champion.getChampionId() + "?locale=pt_BR&tags=all&api_key=RGAPI-12f35902-57c8-4cd9-aa2e-ba2f18283cd6";
+    private static SingleChampionAdapter mAdapter;
     private static final int SINGLE_CHAMPION_LOADER_ID = 1;
     private static final String LOG_TAG = SingleChampionActivity.class.getSimpleName();
     private TextView mEmptyStateTextView;
@@ -209,5 +209,11 @@ public class SingleChampionActivity extends AppCompatActivity implements LoaderC
     {
         super.onPause();
         toast.cancel();
+    }
+
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
     }
 }
