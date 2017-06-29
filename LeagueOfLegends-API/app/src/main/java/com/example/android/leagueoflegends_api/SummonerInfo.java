@@ -2,26 +2,16 @@ package com.example.android.leagueoflegends_api;
 
 public class SummonerInfo
 {
-    private String mLeagueName, mTier, mQueueType, mTierRank, mPlayerId, mPlayerName;
-    private int mPDL, mWins, mLosses;
+    private String[] mTier = new String[3], mTierRank = new String[3];
+    private String mPlayerId, mPlayerName;
+    private int[] mPDL = new int[3], mWins = new int[3], mLosses = new int[3];
 
     /**
      * Constructs a new {@link SummonerInfo} object.
-     * @param leagueName
-     * @param tier
-     * @param queueType
-     * @param tierRank
-     * @param playerId
-     * @param playerName
-     * @param pdl
-     * @param wins
-     * @param losses
      */
-    public SummonerInfo(String leagueName, String tier, String queueType, String tierRank, String playerId, String playerName, int pdl, int wins, int losses)
+    public SummonerInfo(String[] tier, String[] tierRank, String playerId, String playerName, int[] pdl, int[] wins, int[] losses)
     {
-        mLeagueName = leagueName;
         mTier = tier;
-        mQueueType = queueType;
         mTierRank = tierRank;
         mPlayerId = playerId;
         mPlayerName = playerName;
@@ -30,19 +20,11 @@ public class SummonerInfo
         mLosses = losses;
     }
 
-    public String getLeagueName() {
-        return mLeagueName;
-    }
-
-    public String getTier() {
+    public String[] getTier() {
         return mTier;
     }
 
-    public String getQueueType() {
-        return mQueueType;
-    }
-
-    public String getTierRank() {
+    public String[] getTierRank() {
         return mTierRank;
     }
 
@@ -54,15 +36,15 @@ public class SummonerInfo
         return mPlayerName;
     }
 
-    public int getPDL() {
+    public int[] getPDL() {
         return mPDL;
     }
 
-    public int getWins() {
+    public int[] getWins() {
         return mWins;
     }
 
-    public int getLosses() {
+    public int[] getLosses() {
         return mLosses;
     }
 }

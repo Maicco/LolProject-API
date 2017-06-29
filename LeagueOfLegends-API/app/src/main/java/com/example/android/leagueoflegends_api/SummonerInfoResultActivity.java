@@ -18,9 +18,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchSummonerActivity extends AppCompatActivity implements LoaderCallbacks<List<SummonerInfo>>
+public class SummonerInfoResultActivity extends AppCompatActivity implements LoaderCallbacks<List<SummonerInfo>>
 {
-    private static final String LOG_TAG = SearchSummonerActivity.class.getSimpleName();
+    private static final String LOG_TAG = SummonerInfoResultActivity.class.getSimpleName();
 
     private String summonerName = SetSummonerNameActivity.getSummonerName();
     private String summonerIdUrl = "https://br1.api.riotgames.com/lol/summoner/v3/summoners/by-name/"+summonerName+"?api_key=RGAPI-12f35902-57c8-4cd9-aa2e-ba2f18283cd6";
@@ -34,8 +34,9 @@ public class SearchSummonerActivity extends AppCompatActivity implements LoaderC
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_summoner_search);
+        setContentView(R.layout.activity_summoner_info_result);
         Log.v(LOG_TAG, "summonerName: "+summonerName);
+        setTitle(summonerName.toUpperCase());
 
         // Instantiate the adapter
         mAdapter = new SummonerAdapter(this, new ArrayList<SummonerInfo>());

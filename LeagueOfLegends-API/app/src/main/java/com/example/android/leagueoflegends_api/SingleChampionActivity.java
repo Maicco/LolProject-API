@@ -34,12 +34,8 @@ public class SingleChampionActivity extends AppCompatActivity implements LoaderC
     private ProgressBar mLoadingSpinner;
     // Used on toast
     private Toast toast;
-    TextView passiveNameToast;
-    TextView passiveDescriptionToast;
-    TextView cooldownToast;
-    TextView costToast;
-    LinearLayout cooldownLinearLayout;
-    LinearLayout costLinearLayout;
+    private TextView passiveNameToast, passiveDescriptionToast, cooldownToast, costToast;
+    private LinearLayout cooldownLinearLayout, costLinearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -202,6 +198,30 @@ public class SingleChampionActivity extends AppCompatActivity implements LoaderC
         costLinearLayout.setVisibility(View.VISIBLE);
 
         toast.show();
+    }
+
+    public void attackToast(View view)
+    {
+        String string = getString(R.string.attack);
+        Toast.makeText(this, "" + string, Toast.LENGTH_SHORT).show();
+    }
+
+    public void defenseToast(View view)
+    {
+        String string = getString(R.string.defense);
+        Toast.makeText(this, ""+string, Toast.LENGTH_SHORT).show();
+    }
+
+    public void magicToast(View view)
+    {
+        String string = getString(R.string.magic);
+        Toast.makeText(this, ""+string, Toast.LENGTH_SHORT).show();
+    }
+
+    public void difficultyToast(View view)
+    {
+        String string = getString(R.string.difficulty);
+        Toast.makeText(this, ""+string, Toast.LENGTH_SHORT).show();
     }
 
     @Override

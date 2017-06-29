@@ -29,7 +29,7 @@
             android:label="@string/search_summoner"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".SearchSummonerActivity"
+            android:name=".SummonerInfoResultActivity"
             android:label="@string/search_summoner"
             android:parentActivityName=".SetSummonerNameActivity" />
         <activity

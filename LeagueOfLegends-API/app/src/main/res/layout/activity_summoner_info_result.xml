@@ -5,7 +5,7 @@
     android:background="@color/background_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.leagueoflegends_api.SearchSummonerActivity">
+    tools:context="com.example.android.leagueoflegends_api.SummonerInfoResultActivity">
 
     <ListView
         android:id="@+id/summoner_list_view"

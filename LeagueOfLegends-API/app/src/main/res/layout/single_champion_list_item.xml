@@ -42,6 +42,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:foregroundGravity="center"
+        android:onClick="attackToast"
         android:src="@drawable/attack_icon" />
 
     <ProgressBar
@@ -56,6 +57,7 @@
         android:max="10"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        android:onClick="attackToast"
         tools:progress="2" />
 
     <ImageView
@@ -66,6 +68,7 @@
         android:layout_marginBottom="12dp"
         android:layout_marginLeft="16dp"
         android:scaleType="centerCrop"
+        android:onClick="defenseToast"
         android:src="@drawable/shield_icon" />
 
     <ProgressBar
@@ -79,6 +82,7 @@
         android:max="10"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        android:onClick="defenseToast"
         tools:progress="3" />
 
     <ImageView
@@ -89,6 +93,7 @@
         android:layout_marginBottom="12dp"
         android:layout_marginLeft="16dp"
         android:scaleType="centerCrop"
+        android:onClick="magicToast"
         android:src="@drawable/magic_icon" />
 
     <ProgressBar
@@ -102,6 +107,7 @@
         android:max="10"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        android:onClick="magicToast"
         tools:progress="10" />
 
     <ImageView
@@ -111,6 +117,7 @@
         android:layout_below="@id/sc_magic_image_view"
         android:layout_marginLeft="16dp"
         android:scaleType="centerCrop"
+        android:onClick="difficultyToast"
         android:src="@drawable/difficult_icon" />
 
     <ProgressBar
@@ -124,6 +131,7 @@
         android:max="10"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        android:onClick="difficultyToast"
         tools:progress="6" />
 
     <TextView

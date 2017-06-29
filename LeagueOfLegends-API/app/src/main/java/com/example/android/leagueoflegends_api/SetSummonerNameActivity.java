@@ -30,7 +30,7 @@ public class SetSummonerNameActivity extends AppCompatActivity
             Toast.makeText(this, "Insert a summoner name!", Toast.LENGTH_SHORT).show();
         else
         {
-            Intent intent = new Intent(SetSummonerNameActivity.this, SearchSummonerActivity.class);
+            Intent intent = new Intent(SetSummonerNameActivity.this, SummonerInfoResultActivity.class);
             startActivity(intent);
         }
     }

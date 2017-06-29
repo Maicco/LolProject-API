@@ -1,133 +1,357 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/champion_background_color"
-    android:padding="16dp">
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
 
-    <TextView
-        android:id="@+id/queue_text_view"
-        style="@style/SummonerInfoListItem"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/queue"/>
+    <RelativeLayout
+        android:id="@+id/info_queue1_relative_layout"
+        android:layout_width="match_parent"
+        android:minHeight="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/queue_name_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/queue_text_view"
-        android:layout_marginLeft="8dp"
-        android:textColor="@color/text_color_summoner_list_item"
-        tools:text="RANKED_SOLO_5x5"/>
+        <TextView
+            android:id="@+id/info_queue1_type_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textColor="@color/attack_bar_color"
+            android:textStyle="bold"
+            android:text="Solo/Duo" />
 
-    <TextView
-        android:id="@+id/league_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_below="@id/queue_text_view"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/league"/>
+        <TextView
+            android:id="@+id/info_tier1_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/info_queue1_type_text_view"
+            android:textAllCaps="true"
+            android:textColor="@color/list_item_text_color1"
+            tools:text="Gold I" />
 
-    <TextView
-        android:id="@+id/league_name_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/league_text_view"
-        android:layout_below="@id/queue_name_text_view"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/text_color_summoner_list_item"
-        tools:text="Xin Zhao's Sentries"/>
+        <LinearLayout
+            android:id="@+id/info_tier1_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_tier1_text_view"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tier_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_below="@id/league_text_view"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/tier"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tier_name_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/tier_text_view"
-        android:layout_below="@id/league_name_text_view"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="true"
-        android:textColor="@color/text_color_summoner_list_item"
-        tools:text="Bronze"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black_overlay"
+                    android:textStyle="bold"
+                    android:text="Losses"
+                    android:textAllCaps="true" />
 
-    <TextView
-        android:id="@+id/tier_level_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/tier_name_text_view"
-        android:layout_below="@id/league_name_text_view"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="true"
-        android:textColor="@color/text_color_summoner_list_item"
-        tools:text="I"/>
+                <TextView
+                    android:id="@+id/info_wins1_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/attack_bar_color"
+                    android:textSize="18sp"
+                    tools:text="50" />
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/league_points_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_below="@id/league_name_text_view"
-        android:layout_toRightOf="@id/tier_level_text_view"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/league_points"/>
+            <ImageView
+                android:id="@+id/info_tier1_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/gold" />
 
-    <TextView
-        android:id="@+id/pdl_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/league_points_text_view"
-        android:layout_below="@id/league_name_text_view"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="true"
-        android:textColor="@color/list_item_text_color2"
-        tools:text="35"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/wins_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_below="@id/tier_text_view"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/wins"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_overlay"
+                    android:text="Wins"
+                    android:textAllCaps="true" />
 
-    <TextView
-        android:id="@+id/wins_number_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/wins_text_view"
-        android:layout_below="@id/tier_name_text_view"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="true"
-        android:textColor="@color/wins_color"
-        tools:text="31"/>
+                <TextView
+                    android:id="@+id/info_losses1_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/defense_bar_color"
+                    android:textSize="18sp"
+                    tools:text="50" />
+            </LinearLayout>
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/losses_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/wins_number_text_view"
-        android:layout_below="@id/tier_text_view"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/losses"/>
+        <TextView
+            android:id="@+id/info_pdl1_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_tier1_linear_layout"
+            android:gravity="center_horizontal"
+            android:textColor="#ff5722"
+            android:textSize="18sp"
+            tools:text="PDL: 99"/>
 
-    <TextView
-        android:id="@+id/losses_number_text_view"
-        style="@style/SummonerInfoListItem"
-        android:layout_toRightOf="@id/losses_text_view"
-        android:layout_below="@id/tier_name_text_view"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:textAllCaps="true"
-        android:textColor="@color/losses_color"
-        tools:text="45"/>
+    </RelativeLayout>
 
-</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bdbdbd"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="14dp"/>
+
+    <RelativeLayout
+        android:id="@+id/info_queue2_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="200dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/info_queue2_type_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textColor="@color/attack_bar_color"
+            android:textStyle="bold"
+            android:text="Flex 5v5" />
+
+        <TextView
+            android:id="@+id/info_tier2_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/info_queue2_type_text_view"
+            android:textAllCaps="true"
+            android:textColor="@color/list_item_text_color1"
+            tools:text="Gold I" />
+
+        <LinearLayout
+            android:id="@+id/info_tier2_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_tier2_text_view"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black_overlay"
+                    android:textStyle="bold"
+                    android:text="Losses"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/info_wins2_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/attack_bar_color"
+                    android:textSize="18sp"
+                    tools:text="50" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info_tier2_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/gold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_overlay"
+                    android:text="Wins"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/info_losses2_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/defense_bar_color"
+                    android:textSize="18sp"
+                    tools:text="50" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/info_pdl2_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_tier2_linear_layout"
+            android:gravity="center_horizontal"
+            android:textColor="#ff5722"
+            android:textSize="18sp"
+            tools:text="PDL: 99"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bdbdbd"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="14dp"/>
+
+    <RelativeLayout
+        android:id="@+id/info_queue3_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="200dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/info_queue3_type_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textColor="@color/attack_bar_color"
+            android:textStyle="bold"
+            android:text="Flex 3v3" />
+
+        <TextView
+            android:id="@+id/info_tier3_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/info_queue3_type_text_view"
+            android:textAllCaps="true"
+            android:textColor="@color/list_item_text_color1"
+            tools:text="Gold I" />
+
+        <LinearLayout
+            android:id="@+id/info_tier3_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_tier3_text_view"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black_overlay"
+                    android:textStyle="bold"
+                    android:text="Losses"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/info_wins3_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/attack_bar_color"
+                    android:textSize="18sp"
+                    tools:text="50" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info_tier3_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/gold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_overlay"
+                    android:text="Wins"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/info_losses3_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/defense_bar_color"
+                    android:textSize="18sp"
+                    tools:text="50" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/info_pdl3_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_tier3_linear_layout"
+            android:gravity="center_horizontal"
+            android:textColor="#ff5722"
+            android:textSize="18sp"
+            tools:text="PDL: 99"/>
+
+    </RelativeLayout>
+</LinearLayout>
