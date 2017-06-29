@@ -40,5 +40,5 @@
     <color name="magic_bar_color">#0277bd</color>
     <color name="difficult_bar_color">#311b92</color>
 
-    <color name="black_overlay">#66000000</color>
+    <color name="black_overlay">#000000</color>
 </resources>

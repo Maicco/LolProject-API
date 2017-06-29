@@ -4,9 +4,11 @@ import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -130,24 +132,51 @@ public class SummonerLoader extends AsyncTaskLoader<List<SummonerInfo>>
         {
             JSONArray summonerInfoArray= new JSONArray(summonerInfoJson);
 
-            for (int i=0; i<summonerInfoArray.length(); i++)
+            String[] tier = new String[3], rank = new String[3];
+            String playerId, playerName;
+            int[] pdl = new int[3], wins = new int[3], losses = new int[3];
+
+            JSONObject jsonObject = summonerInfoArray.getJSONObject(0);
+            playerId = jsonObject.getString("playerOrTeamId");
+            playerName = jsonObject.getString("playerOrTeamName");
+
+            // Check if the JsonArray is equals 3, else initializes the position 2 for all arrays to be default.
+            // Because accordingly to the summonerId, the JSON result can return an JSON Array which the length is 2.
+            if(summonerInfoArray.length() == 3)
             {
-                JSONObject currentSummonerInfo = summonerInfoArray.getJSONObject(i);
+                for (int i = 0; i < summonerInfoArray.length(); i++)
+                {
+                    JSONObject currentSummonerInfo = summonerInfoArray.getJSONObject(i);
 
-                String leagueName = currentSummonerInfo.getString("leagueName");
-                String tier = currentSummonerInfo.getString("tier");
-                String queueType = currentSummonerInfo.getString("queueType");
-                String rank = currentSummonerInfo.getString("rank");
-                String playerId = currentSummonerInfo.getString("playerOrTeamId");
-                String playerName = currentSummonerInfo.getString("playerOrTeamName");
-                int pdl = currentSummonerInfo.getInt("leaguePoints");
-                int wins = currentSummonerInfo.getInt("wins");
-                int losses = currentSummonerInfo.getInt("losses");
-
-                SummonerInfo summonerInfo = new SummonerInfo(leagueName, tier, queueType, rank, playerId, playerName, pdl, wins, losses);
-
-                summoners.add(summonerInfo);
+                    tier[i] = currentSummonerInfo.getString("tier");
+                    rank[i] = currentSummonerInfo.getString("rank");
+                    pdl[i] = currentSummonerInfo.getInt("leaguePoints");
+                    wins[i] = currentSummonerInfo.getInt("wins");
+                    losses[i] = currentSummonerInfo.getInt("losses");
+                }
             }
+            else
+            {
+                for (int i = 0; i < summonerInfoArray.length(); i++)
+                {
+                    JSONObject currentSummonerInfo = summonerInfoArray.getJSONObject(i);
+
+                    tier[i] = currentSummonerInfo.getString("tier");
+                    rank[i] = currentSummonerInfo.getString("rank");
+                    pdl[i] = currentSummonerInfo.getInt("leaguePoints");
+                    wins[i] = currentSummonerInfo.getInt("wins");
+                    losses[i] = currentSummonerInfo.getInt("losses");
+                }
+
+                tier[2] = "Unranked";
+                rank[2] = "";
+                pdl[2] = 0;
+                wins[2] = 0;
+                losses[2] = 0;
+            }
+
+            SummonerInfo summonerInfo = new SummonerInfo(tier, rank, playerId, playerName, pdl, wins, losses);
+            summoners.add(summonerInfo);
         }
         catch (JSONException e)
         {
